@@ -8,7 +8,7 @@
 
 ## 🔍 Table of Contents
 - [🧩IBSI (Image Biomarker Standardisation Initiative) Standardization-1.0](#IBSI-Standardization)
-- [🛠️Key Features](#key-features)
+- [✨Key Features](#key-features)
 - [🤖Deep Learning Feature Extraction](#deep-learning-feature-extraction)
 - [📚Library Usage](#library-usage)
   - [📂Single File Processing](#single-file-processing)
@@ -38,11 +38,11 @@
 - [🙏Acknowledgment](#acknowledgment)
 - [📜License](#license)
 
-## ✨IBSI Standardization
+## 🧩IBSI Standardization
 Both the script and library have been rigorously standardized based on **IBSI** (Image Biomarker Standardisation Initiative) Standardization 1.0. PySERA returns IBSI-compliant feature values that match the reference standard, ensuring reproducibility and comparability across studies.
 See the detailed evaluation and test cases here: [IBSI_Evaluation Folder](https://github.com/Tecvico/PySERA/tree/main/IBSI_Evaluation)
 
-## 🛠️Key Features
+## ✨Key Features
 
 PySERA provides a **single-function API** that handles all radiomics processing:
 
