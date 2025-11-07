@@ -38,7 +38,7 @@
 - [🙏Acknowledgment](#acknowledgment)
 - [📜License](#license)
 
-## ✨IBSI Standardization
+## 🧩IBSI Standardization
 Both the script and library have been rigorously standardized based on **IBSI** (Image Biomarker Standardisation Initiative) Standardization 1.0. PySERA returns IBSI-compliant feature values that match the reference standard, ensuring reproducibility and comparability across studies.
 See the detailed evaluation and test cases here: [IBSI_Evaluation Folder](https://github.com/MohammadRSalmanpour/PySERATest/tree/main/IBSI_Evaluation)
 
