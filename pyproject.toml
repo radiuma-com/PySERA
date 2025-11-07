@@ -68,10 +68,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/MohammadRSalmanpour/PySERA"
+Homepage = "https://github.com/Tecvico/PySERA"
 Documentation = "https://pysera.readthedocs.io/"
-Repository = "https://github.com/MohammadRSalmanpour/PySERA.git"
-"Bug Reports" = "https://github.com/MohammadRSalmanpour/PySERA/issues"
+Repository = "https://github.com/Tecvico/PySERA.git"
+"Bug Reports" = "https://github.com/Tecvico/PySERA/issues"
 
 [project.scripts]
 pysera = "pysera.cli:main"
