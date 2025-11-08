@@ -18,7 +18,7 @@
   - [🔧Advanced Configuration](#advanced-configuration)
 - [📥Installation](#installation)
   - [🌐GitHub Installation](#github-installation)
-  - [💻Python Script - Command Line Interface (CLI)](#python-script---command-line-interface-cli)
+  - [🖥️Python Script - Command Line Interface (CLI)](#python-script---command-line-interface-cli)
   - [📦Library Installation via pip](#library-installation-via-pip)
 
 - [📂Data Structure Requirements](#data-structure-requirements)
