@@ -30,7 +30,7 @@
 - [📁Supported File Formats](#supported-file-formats)
 - [🎯Library Examples](#library-examples)
 - [⚡Performance Tips](#performance-tips)
-- [🖥️Integration of PySERA to GUI](#integration-of-pysera-to-gui)
+- [💻Integration of PySERA to GUI](#integration-of-pysera-to-gui)
 - [❓Troubleshooting](#troubleshooting)
 - [🕒Version History](#Version-History)
 - [📬Contact](#contact)
@@ -557,7 +557,7 @@ Example use cases:
 9. **Memory Optimization**: PySERA's OOP architecture automatically manages RAM utilization during large-scale batch operations
 10. **Logging Optimization**: Use `report="info"` or `report="warning"` to reduce logging overhead in production environments while maintaining essential monitoring
 
-## 🖥️Integration of PySERA to GUI
+## 💻Integration of PySERA to GUI
 
 **PySERA** will be available as a 3D Slicer extension in the near future, providing seamless radiomics feature extraction within the popular medical imaging platform. Additionally, PySERA currently serves as the core feature extraction engine for **Radiuma**, another product in our suite that offers a comprehensive graphical interface for radiomics analysis.
 
