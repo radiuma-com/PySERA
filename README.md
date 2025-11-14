@@ -31,6 +31,7 @@
 - [🎯Library Examples](#library-examples)
 - [⚡Performance Tips](#performance-tips)
 - [💻Integration of PySERA to GUI](#integration-of-pysera-to-gui)
+- [❓Troubleshooting](#troubleshooting)
 - [🕒Version History](#Version-History)
 - [📬Contact](#contact)
 - [👥Authors](#authors)
