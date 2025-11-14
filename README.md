@@ -40,7 +40,7 @@
 
 ## 🧩IBSI Standardization
 Both the script and library have been rigorously standardized based on **IBSI** (Image Biomarker Standardisation Initiative) Standardization 1.0. PySERA returns IBSI-compliant feature values that match the reference standard, ensuring reproducibility and comparability across studies.
-See the detailed evaluation and test cases here: [IBSI_Evaluation Folder](https://github.com/Tecvico/PySERA/tree/main/IBSI_Evaluation)
+See the detailed evaluation and test cases here: [IBSI_Evaluation Folder](https://github.com/radiuma-com/PySERA/tree/main/IBSI_Evaluation)
 
 ## ✨Key Features
 
@@ -242,7 +242,7 @@ This gives you access to the standalone script radiomics_standalone.py and all e
 
 ```bash
 # Clone the repository
-git clone https://github.com/Tecvico/PySERA.git
+git clone https://github.com/radiuma-com/PySERA.git
 cd pysera
 ```
 ### macOS/Linux Installation
@@ -523,7 +523,7 @@ The function returns a dictionary with the following keys:
 
 ## 🎯Library Examples
 
-See the [`library_examples`](https://github.com/Tecvico/PySERA/tree/main/library_examples) directory for comprehensive usage examples:
+See the [`library_examples`](https://github.com/radiuma-com/PySERA/tree/main/library_examples) directory for comprehensive usage examples:
 
 ```bash
 # Run library_examples
@@ -568,7 +568,7 @@ Example use cases:
 ## 🕒Version History
 
 For detailed release notes, explanations of updates, and technical changes, please see the  
-👉 [Development Report](https://github.com/Tecvico/PySERA/blob/main/development_report.md)
+👉 [Development Report](https://github.com/radiuma-com/PySERA/blob/main/development_report.md)
 
     v2
     ├── v2.1
@@ -665,7 +665,7 @@ amirporia99.1378@gmail.com
   title={pysera: A Simple Python Library for Radiomics Feature Extraction},
   author={pysera Team},
   year={2025},
-  url={https://github.com/Tecvico/PySERA}
+  url={https://github.com/radiuma-com/PySERA}
 }
 ```
 ## 📜License
@@ -674,7 +674,7 @@ This open-source software is released under the **MIT License**, which grants pe
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/Tecvico/PySERA/issues)
+- **Issues**: [GitHub Issues](https://github.com/radiuma-com/PySERA/issues)
 - **Documentation**: This README and the included guides
 - **Examples**: See `examples/basic_usage.py`
 

@@ -30,7 +30,7 @@ setup(
     description="pysera (Python-based Standardized Extraction for Radiomics Analysis) is a comprehensive Python library for radiomics feature extraction from medical imaging data. It provides a simple, single-function API with built-in multiprocessing support and comprehensive report capabilities.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Tecvico/PySERA",
+    url="https://github.com/radiuma-com/PySERA",
     packages=find_packages(),
     license="MIT",
     classifiers=[
@@ -66,8 +66,8 @@ setup(
     keywords="medical-imaging Standardized-Radiomics-Feature-Extraction Quantitative-Analysis IBSI_Evaluation-Standardization "
              "healthcare",
     project_urls={
-        "Bug Reports": "https://github.com/Tecvico/PySERA/issues",
-        "Source": "https://github.com/Tecvico/PySERA",
+        "Bug Reports": "https://github.com/radiuma-com/PySERA/issues",
+        "Source": "https://github.com/radiuma-com/PySERA",
         "Documentation": "https://pysera.readthedocs.io/",
     },
 )
