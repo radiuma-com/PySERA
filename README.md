@@ -396,7 +396,7 @@ To help users quickly test **PySERA** and understand the correct folder structur
 
 You can download the sample dataset here:
 
-🔗 **Sample Dataset (CT/MRI/PET/RTSTRUCT – NIfTI + Multi-DICOM formats)**  
+🔗 **Sample Dataset**  
 https://github.com/MohammadRSalmanpour/PySERATest/tree/main/library_examples/Data
 
 
