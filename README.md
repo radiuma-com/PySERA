@@ -386,6 +386,20 @@ For batch processing or multi-DICOM inputs, the folder structure for images and 
           │   ├── patient001.nii.gz
           └── patient002.nii.gz
 
+### 🧪Sample Multi-Modality Dataset (CT, MRI, PET, RTSTRUCT)
+
+To help users quickly test **PySERA** and understand the correct folder structure, we provide sample multimodal datasets (CT, MRI, PET), including:
+
+- **NIfTI files**  
+- **Multi-DICOM series**  
+- **RTSTRUCT (Radiotherapy Structure Set)**  
+
+You can download the sample dataset here:
+
+🔗 **Sample Dataset (CT/MRI/PET/RTSTRUCT – NIfTI + Multi-DICOM formats)**  
+https://github.com/MohammadRSalmanpour/PySERATest/tree/main/library_examples/Data
+
+
 ### 📋PySERA Parameters Reference
 
 
