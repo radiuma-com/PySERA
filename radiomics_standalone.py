@@ -45,7 +45,6 @@ python radiomics_standalone.py --image_input path/to/image.nrrd --mask_input pat
 # NumPy array image and mask (file-based)
 python radiomics_standalone.py --image_input path/to/image.npy --mask_input path/to/mask.npy --output results/
 
-
 # Any format supported by SimpleITK
 python radiomics_standalone.py --image_input path/to/image.ext --mask_input path/to/mask.ext --output results/
 """
