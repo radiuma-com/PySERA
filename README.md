@@ -613,25 +613,25 @@ For detailed release notes, explanations of updates, and technical changes, plea
     v2
     ├── v2.1
     │   ├── v2.1.4 - 2025-11-19
-    │   │   - Bug fix
-    │   │   - use instance series UID for rt-struct files
+    │   │   - 🐛 Bug fix  
+    │   │   - 📌 Use instance *SeriesInstanceUID* for RT-STRUCT files
     │   ├── v2.1.3 - 2025-11-07
-    │   │   - Bug fix
-    │   │   - modify default cpu core allocation
-    │   │   - remove additional packages
+    │   │   - 🐛 Bug fix  
+    │   │   - ⚙️ Modified default CPU core allocation  
+    │   │   - 🧹 Removed additional packages
     │   ├── v2.1.2 - 2025-10-24
-    │   │   - Bug fix
+    │   │   - 🐛 Bug fix
     │   ├── v2.1.1 - 2025-10-22
-    │   │   - Bug fix
+    │   │   - 🐛 Bug fix
     │   ├── v2.1.0 - 2025-10-22
-    │   │   - Bug fix (configuration)
-    │   │   - add aggregation_lesion parameter for aggregating radiomics features
-    │   │   - update parameter default
+    │   │   - 🐛 Bug fix (configuration)  
+    │   │   - ➕ Added `aggregation_lesion` parameter for feature aggregation  
+    │   │   - 🔧 Updated parameter defaults
     ├── v2.0
     │   ├── v2.0.2 - 2025-10-20
-    │   │   - bug fix (configuration)
+    │   │   - 🐛 Bug fix (configuration)
     │   ├── v2.0.1 - 2025-10-20
-    │   │   - remove additional packages
+    │   │   - 🧹 Removed additional packages
     │   ├── v2.0.0 - 2025-10-19
     │   │   - ✨Major Feature Expansion, 557 features including 487 IBSI-compliant, 60 diagnostic, and 10 moment-invariant features
     │   │   - 🎯New `categories` parameter for feature category selection
@@ -675,7 +675,7 @@ For detailed release notes, explanations of updates, and technical changes, plea
        - 📄Support for some types of files
 
 ## 📬Contact
-SERA is available **free of charge**.
+PySERA is available **free of charge**.
 For access, questions, or feedback:
 
 **Dr. Mohammad R. Salmanpour (Team Lead)**  
