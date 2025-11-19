@@ -705,10 +705,11 @@ amirporia99.1378@gmail.com
 
 ```bibtex
 @software{pysera2025,
-  title={pysera: A Simple Python Library for Radiomics Feature Extraction},
-  author={pysera Team},
+  title={PySERA – Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics},
+  author={Mohammad R. Salmanpour, Amir Hossein Pouria, Sirwan Barichin, Yasaman Salehi, Sonya Falahati, Isaac Shiri, Mehrdad Oveisi, Arman Rahmim},
   year={2025},
-  url={https://github.com/radiuma-com/PySERA}
+  url={}
+  Arkiv
 }
 ```
 ## 📜License
