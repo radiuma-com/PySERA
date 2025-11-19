@@ -75,9 +75,9 @@ PySERA supports advanced **deep learning-based** feature extraction alongside tr
 
 **Available Deep Learning Models**:
 
-- **`resnet50`** - 2047 features: Residual Network with 50 layers, balanced performance and accuracy
-- **`vgg16`** - 511 features: Visual Geometry Group with 16 layers, strong hierarchical feature representation  
-- **`densenet121`** - 1023 features: Dense Convolutional Network with 121 layers, efficient feature reuse
+- **`resnet50`** - 2048 features: Residual Network with 50 layers, balanced performance and accuracy
+- **`vgg16`** - 512 features: Visual Geometry Group with 16 layers, strong hierarchical feature representation  
+- **`densenet121`** - 1024 features: Dense Convolutional Network with 121 layers, efficient feature reuse
   
 ### 📦Library Installation via pip
 
