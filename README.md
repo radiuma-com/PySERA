@@ -561,9 +561,35 @@ Example use cases:
 
 **PySERA** will be available as a 3D Slicer extension in the near future, providing seamless radiomics feature extraction within the popular medical imaging platform. Additionally, PySERA currently serves as the core feature extraction engine for **Radiuma**, another product in our suite that offers a comprehensive graphical interface for radiomics analysis.
 
-### Get Help
 
-- **Examples**: Run `python examples/basic_usage.py`
+## ❓Troubleshooting
+
+### Common Issues & Fixes
+
+- **Installation Problems**  
+  **Issue:** Dependency conflicts or missing packages  
+  **Fix:** Create a fresh virtual environment and run:  
+  `pip install --upgrade pip wheel setuptools` before installing PySERA.
+
+- **Memory Overload**  
+  **Issue:** Crashes or slowdowns with large datasets  
+  **Fix:** Set `num_workers="2"` or `enable_parallelism=False`.
+
+- **File Processing Errors**  
+  **Issue:** “No matching files found” or dimension mismatch errors  
+  **Fix:** Check folder structure and ensure image–mask filenames correspond correctly.
+
+- **ROI Volume Warnings**  
+  **Issue:** Very small ROIs or NaN features  
+  **Fix:** Increase `min_roi_volume=50` or use `feature_value_mode="APPROXIMATE_VALUE"`.
+
+- **Performance Bottlenecks**  
+  **Issue:** Slow processing  
+  **Fix:** Use `num_workers="auto"` and target fewer feature categories with the `categories` parameter.
+
+  ### Get Help
+  
+  - **Examples**: Run `python examples/basic_usage.py`
 
 ## 🕒Version History
 
