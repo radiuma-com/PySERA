@@ -214,7 +214,14 @@ class DataLoader:
     def extract_rois_from_rtstruct(self, rtstruct_path: str, ref_img: sitk.Image, ref_dir: str) -> Tuple[
         Dict[str, str], Dict, Optional[np.ndarray]]:
         """Main entry to extract selected ROIs efficiently."""
-        rtstruct = RTStructBuilder.create_from(ref_dir, rtstruct_path)
+        try:
+            rtstruct = RTStructBuilder.create_from(ref_dir, rtstruct_path)
+        except Exception as e:
+            logger.warning("RT-STRUCT and image multi-dicom instance series UID are not equal.")
+            try:
+                rtstruct = load_rtstruct_without_uid_check(rtstruct_path, ref_img)
+            except Exception as e:
+                logger.error(e)
 
         # Step 1: Collect metadata (no saving yet)
         all_lesions_meta = self.collect_lesion_metadata(rtstruct, ref_img)
@@ -236,6 +243,8 @@ class DataLoader:
             try:
                 mask = rtstruct.get_roi_mask_by_name(roi_name)
                 if mask is None or not np.any(mask):
+                    logger.warning(
+                        f"ROI '{roi_name}' produced empty mask — likely modality mismatch or out-of-bounds contour.")
                     continue
 
                 if self.apply_preprocessing:
@@ -607,8 +616,7 @@ def apply_fallback_if_needed(arr: np.ndarray, image_array: np.ndarray, meta: dic
 
 
 def get_series_ids(dicom_dir: str) -> List[str]:
-    reader = sitk.ImageSeriesReader()
-    return reader.GetGDCMSeriesIDs(dicom_dir)
+    return get_series_instance_uids(dicom_dir)
 
 
 def build_metadata(
@@ -691,7 +699,7 @@ def detect_dicom_type(filepath: str) -> str:
     ds = pydicom.dcmread(filepath, stop_before_pixels=True)
     sop_uid = getattr(ds, "SOPClassUID", "")
     modality = getattr(ds, "Modality", "")
-    if sop_uid == "1.2.840.10008.5.1.4.1.1.481.3":
+    if modality == "RTSTRUCT" or sop_uid == "1.2.840.10008.5.1.4.1.1.481.3":
         return "rtstruct"
     if modality == "SEG":
         return "seg"
@@ -703,6 +711,81 @@ def detect_dicom_type(filepath: str) -> str:
 # ==============================
 # RT-STRUCT: RT-STRUCT Handling
 # ==============================
+class MinimalRTStruct:
+    """Lightweight RTStruct alternative with only two required methods."""
+    def __init__(self, roi_masks):
+        self.roi_masks = roi_masks  # dict: name → numpy array mask
+
+    def get_roi_names(self):
+        return list(self.roi_masks.keys())
+
+    def get_roi_mask_by_name(self, name):
+        return self.roi_masks.get(name, None)
+
+
+def load_rtstruct_without_uid_check(rtstruct_path: str, ref_img: sitk.Image):
+
+    ds = pydicom.dcmread(rtstruct_path)
+
+    if "ROIContourSequence" not in ds:
+        raise ValueError("RTSTRUCT has no ROIContourSequence.")
+
+    ref_array = sitk.GetArrayFromImage(ref_img)
+    roi_masks = {}
+
+    for roi_contour in ds.ROIContourSequence:
+
+        roi_number = roi_contour.ReferencedROINumber
+
+        roi_name = None
+        for item in ds.StructureSetROISequence:
+            if item.ROINumber == roi_number:
+                roi_name = item.ROIName
+                break
+
+        if roi_name is None:
+            continue
+
+        mask = np.zeros(ref_array.shape, dtype=np.uint8)
+
+        if not hasattr(roi_contour, "ContourSequence"):
+            continue
+
+        for contour in roi_contour.ContourSequence:
+
+            pts = np.array(contour.ContourData).reshape(-1, 3)   # EXACT world coords
+
+            # Convert each point using SITK native conversion
+            voxel_pts = []
+            for p in pts:
+                try:
+                    idx = ref_img.TransformPhysicalPointToIndex(tuple(p))
+                    voxel_pts.append(idx)
+                except:
+                    continue
+
+            voxel_pts = np.array(voxel_pts)
+
+            # Process slice by slice
+            slice_idx = voxel_pts[:, 2]
+
+            for sl in np.unique(slice_idx):
+                if sl < 0 or sl >= mask.shape[0]:
+                    continue
+
+                poly = voxel_pts[slice_idx == sl][:, :2]
+
+                if len(poly) < 3:
+                    continue
+
+                from skimage.draw import polygon
+                rr, cc = polygon(poly[:, 1], poly[:, 0], shape=mask[sl].shape)
+                mask[sl, rr, cc] = 1
+
+        roi_masks[roi_name] = mask.astype(np.uint8)
+
+    return MinimalRTStruct(roi_masks)
+
 
 def label_and_measure_lesions_from_rtstruct(mask: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
     """Label connected lesions using CC3D and compute their volumes."""
@@ -731,11 +814,33 @@ def load_seg_file(filepath: str, tag: str) -> Tuple[Optional[np.ndarray], Option
 # ==============================
 # RT-STRUCT: Reference Image Loader
 # ==============================
+def get_series_instance_uids(dicom_dir):
+    """
+    Extract Series Instance UIDs from DICOM directory
+    """
+    series_uids = set()
+
+    for root, dirs, files in os.walk(dicom_dir):
+        for file in files:
+            try:
+                file_path = os.path.join(root, file)
+                ds = pydicom.dcmread(file_path, stop_before_pixels=True)
+
+                if hasattr(ds, 'SeriesInstanceUID'):
+                    suid = ds.SeriesInstanceUID
+                    series_uids.add(suid)
+
+            except Exception as e:
+                print(f"Error reading {file}: {e}")
+                continue
+
+    return list(series_uids)
+
 
 def load_reference_image(dicom_dir: str) -> Optional[sitk.Image]:
     """Load first series image from DICOM directory."""
     reader = sitk.ImageSeriesReader()
-    series_ids = reader.GetGDCMSeriesIDs(dicom_dir)
+    series_ids = get_series_instance_uids(dicom_dir)
     if not series_ids:
         return None
     try:
