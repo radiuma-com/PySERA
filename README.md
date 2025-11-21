@@ -708,7 +708,7 @@ amirporia99.1378@gmail.com
   title={PySERA – Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics},
   author={Mohammad R. Salmanpour, Amir Hossein Pouria, Sirwan Barichin, Yasaman Salehi, Sonya Falahati, Isaac Shiri, Mehrdad Oveisi, Arman Rahmim},
   year={2025},
-  url={}
+  url={https://arxiv.org/abs/2511.15963}
   Arkiv
 }
 ```
