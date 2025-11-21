@@ -706,12 +706,14 @@ amirporia99.1378@gmail.com
 ## 📚Citation
 
 ```bibtex
-@software{pysera2025,
-  title={PySERA – Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics},
-  author={Mohammad R. Salmanpour, Amir Hossein Pouria, Sirwan Barichin, Yasaman Salehi, Sonya Falahati, Isaac Shiri, Mehrdad Oveisi, Arman Rahmim},
-  year={2025},
-  url={https://arxiv.org/abs/2511.15963}
-  Arkiv
+@misc{salmanpour2025pyseraopensourcestandardizedpython,
+      title={PySERA: Open-Source Standardized Python Library for Automated, Scalable, and Reproducible Handcrafted and Deep Radiomics}, 
+      author={Mohammad R. Salmanpour and Amir Hossein Pouria and Sirwan Barichin and Yasaman Salehi and Sonya Falahati and Isaac Shiri and Mehrdad Oveisi and Arman Rahmim},
+      year={2025},
+      eprint={2511.15963},
+      archivePrefix={arXiv},
+      primaryClass={physics.med-ph},
+      url={https://arxiv.org/abs/2511.15963}, 
 }
 ```
 ## 📜License
