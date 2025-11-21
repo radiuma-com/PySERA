@@ -614,6 +614,8 @@ For detailed release notes, explanations of updates, and technical changes, plea
 
     v2
     ├── v2.1
+    │   ├── v2.1.5 - 2025-11-21
+    │   │   - 🐛 Bug fix  
     │   ├── v2.1.4 - 2025-11-19
     │   │   - 🐛 Bug fix  
     │   │   - 📌 Use instance *SeriesInstanceUID* for RT-STRUCT files
