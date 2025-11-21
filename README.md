@@ -388,7 +388,7 @@ For batch processing or multi-DICOM inputs, the folder structure for images and 
 
 ### 🧪Sample Multi-Modality Dataset (CT, MRI, PET, RTSTRUCT)
 
-To help users quickly test **PySERA** and understand the correct folder structure, we provide sample multimodal datasets (CT, MRI, PET), including:
+To help users quickly test **PySERA** and understand the correct folder structure, we provide sample multimodal datasets (CT, MRI, PET) taken from CT scans for lung cancer overall survival prediction, PET scans for head & neck cancer recurrence-free survival, PET & CT scans for HPV status classification, and T1/T2-sequence MRI scans from the BraTS2021 dataset, including:
 
 - **NIfTI files**  
 - **Multi-DICOM series**  
