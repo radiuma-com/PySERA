@@ -386,18 +386,6 @@ For batch processing or multi-DICOM inputs, the folder structure for images and 
           │   ├── patient001.nii.gz
           └── patient002.nii.gz
 
-### 🧪Sample Multi-Modality Dataset (CT, MRI, PET, RTSTRUCT)
-
-To help users quickly test **PySERA** and understand the correct folder structure, we provide sample multimodal datasets (CT, MRI, PET) taken from CT scans for lung cancer overall survival prediction, PET scans for head & neck cancer recurrence-free survival, PET & CT scans for HPV status classification, and T1/T2-sequence MRI scans from the BraTS2021 dataset, including:
-
-- **NIfTI files**  
-- **Multi-DICOM series**  
-- **RTSTRUCT (Radiotherapy Structure Set)**  
-
-You can download the sample dataset here:
-
-🔗 **Sample Dataset**  
-https://github.com/MohammadRSalmanpour/PySERATest/tree/main/library_examples/Data
 
 
 ### 📋PySERA Parameters Reference
@@ -557,6 +545,20 @@ Example use cases:
 - Deep learning feature extraction using pre-trained models (ResNet50, VGG16, DenseNet121)
 - Real-time monitoring progress tracking with callback function integration
 - Multi-modal analysis across CT, MRI, PET, SPECT, X-Ray, and Ultrasound
+
+### 🧪Sample Multi-Modality Dataset (CT, MRI, PET, RTSTRUCT)
+
+To help users quickly test **PySERA** and understand the correct folder structure, we provide sample multimodal datasets (CT, MRI, PET) taken from CT scans for lung cancer overall survival prediction, PET scans for head & neck cancer recurrence-free survival, PET & CT scans for HPV status classification, and T1/T2-sequence MRI scans from the BraTS2021 dataset, including:
+
+- **NIfTI files**  
+- **Multi-DICOM series**  
+- **RTSTRUCT (Radiotherapy Structure Set)**  
+
+You can download the sample dataset here:
+
+🔗 **Sample Dataset**  
+https://github.com/MohammadRSalmanpour/PySERATest/tree/main/library_examples/Data
+
 
 ## ⚡Performance Tips
 
