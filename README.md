@@ -35,6 +35,7 @@
 - [🕒Version History](#Version-History)
 - [📬Contact](#contact)
 - [👥Authors](#authors)
+- [📚Citation](#citation)
 - [🙏Acknowledgment](#acknowledgment)
 - [📜License](#license)
 
@@ -559,7 +560,6 @@ You can download the sample dataset here:
 🔗 **Sample Dataset**  
 https://github.com/MohammadRSalmanpour/PySERATest/tree/main/library_examples/Data
 
-
 ## ⚡Performance Tips
 
 1. **Optimize CPU Utilization**: Set `num_workers="auto"` to leverage all available CPU cores for maximum parallel processing throughput
@@ -615,7 +615,7 @@ For detailed release notes, explanations of updates, and technical changes, plea
     v2
     ├── v2.1
     │   ├── v2.1.5 - 2025-11-21
-    │   │   - 🐛 Bug fix  
+    │   │   - 🐛 Bug fix 
     │   ├── v2.1.4 - 2025-11-19
     │   │   - 🐛 Bug fix  
     │   │   - 📌 Use instance *SeriesInstanceUID* for RT-STRUCT files
@@ -694,16 +694,15 @@ For technical support and maintenance inquiries, please contact:
  msalman@bccrc.ca – m.salmanpoor66@gmail.com – m.salmanpour@ubc.ca
 
 **Amir Hossein Pouria**  
-amirporia99.1378@gmail.com  
 
 ## 👥Authors
 - **Dr. Mohammad R. Salmanpour (Team Lead, Fund Provider, Evaluator, Medical Imaging Expert, Backend Development, Code Refactoring, Debugging, Library Management, IBSI Standardization, and Activation of the PySERA Library, and GUI Development in 3D Slicer)** – [msalman@bccrc.ca](mailto:msalman@bccrc.ca), [m.salmanpoor66@gmail.com](mailto:m.salmanpoor66@gmail.com), [m.salmanpour@ubc.ca](mailto:m.salmanpour@ubc.ca)
-- **Amir Hossein Pouria (Assistant Team Lead; Backend Development, Code Refactoring, Debugging, and Library Management)** – [amirporia99.1378@gmail.com](mailto:amirporia99.1378@gmail.com)
-- **Sirwan Barichin (IBSI Standardization, Debugging, and Activation of the PySERA Library, and GUI Development in 3D Slicer)** – [sirwanbarichin@gmail.com](mailto:sirwanbarichin@gmail.com)
-- **Yasaman Salehi (Backend Development, Code Refactoring, and Debugging)** – [y.salehi7698@gmail.com](mailto:y.salehi7698@gmail.com)
-- **Sonya Falahati (Tesing and Data prepration)** – [falahati.sonya@gmail.com](mailto:falahati.sonya@gmail.com)
-- **Dr. Mehrdad Oveisi (Evaluator, Software Engineer, and Advisor)** – [moveisi@cs.ubc.ca](mailto:moveisi@cs.ubc.ca)
-- **Dr. Arman Rahmim (Fund Provider, Medical Imaging Expert, Evaluator, and Advisor)** – [arman.rahmim@ubc.ca](mailto:arman.rahmim@ubc.ca), [arahmim@bccrc.ca ](mailto:arahmim@bccrc.ca)
+- **Amir Hossein Pouria (Assistant Team Lead; Backend Development, Code Refactoring, Debugging, and Library Management)** 
+- **Sirwan Barichin (IBSI Standardization, Debugging, and Activation of the PySERA Library, and GUI Development in 3D Slicer)** 
+- **Yasaman Salehi (Backend Development, Code Refactoring, and Debugging)** 
+- **Sonya Falahati (Tesing and Data prepration)** 
+- **Dr. Mehrdad Oveisi (Evaluator, Software Engineer, and Advisor)** 
+- **Dr. Arman Rahmim (Fund Provider, Medical Imaging Expert, Evaluator, and Advisor)** 
 
 ## 📚Citation
 
@@ -734,7 +733,7 @@ This study was supported by:
 
 - [🔬 **Qu**antitative **R**adiomolecular **I**maging and **T**herapy (Qurit) Lab, University of British Columbia, Vancouver, BC, Canada](https://www.qurit.ca)  
 - [🏥 BC Cancer Research Institute, Department of Basic and Translational Research, Vancouver, BC, Canada](https://www.bccrc.ca/)  
-- [💻 **Vir**tual **Collaboration (VirCollab) Group, Vancouver, BC, Canada](https://www.vircollab.com)  
+- [💻 **Vir**tual **Collab**oration (VirCollab) Group, Vancouver, BC, Canada](https://vircollab.com/#/) 
 - [🏭 **Tec**hnological **Vi**rtual **Co**llaboration **Corp**oration (TECVICO Corp.), Vancouver, BC, Canada](https://www.tecvico.com)  
 We gratefully acknowledge funding from the💰 Natural Sciences and Engineering Research Council of Canada (**NSERC**) Idea to Innovation [**I2I**] Grant **GR034192**.
 ---
