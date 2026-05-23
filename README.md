@@ -183,7 +183,16 @@ result = pysera.process_batch(
 print(f"Processed {result['processed_files']} files")
 print(f"Total processing time: {result['processing_time']:.2f} seconds")
 ```
+### ⚠️ Additional Requirements for Deep Learning Models
 
+Deep learning feature extraction requires additional dependencies that are **not installed automatically with PySERA**.  
+Before using `extraction_mode="deep_feature"`, you must install **PyTorch** and **TorchVision**, which are required for loading the pre-trained CNN models.
+
+Install the required packages using pip:
+```bash
+pip install torch torchvision
+```
+ 
 
 ## 🔧Advanced Configuration
 
