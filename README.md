@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/radiuma-com/PySERA/main/Documentations/PySERA.png" alt="PySERA Logo" height="80" align="left">
+</div>
+
 # PySERA: Python-Based Standardized Extraction for Radiomics Analysis – Python Radiomics Script and Library
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
