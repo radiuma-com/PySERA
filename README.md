@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/radiuma-com/PySERA/main/Documentations/PySERA.png" alt="PySERA Logo" height="60" align="left">
+  <img src="https://raw.githubusercontent.com/radiuma-com/PySERA/main/Documentations/PySERA.png" alt="PySERA Logo" height="100" align="left">
 </div>
 
 # PySERA: Python-Based Standardized Extraction for Radiomics Analysis – Python Radiomics Script and Library
