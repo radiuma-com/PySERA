@@ -153,6 +153,11 @@ print(f"Processed {result['processed_files']} files")
 print(f"Total processing time: {result['processing_time']:.2f} seconds")
 ```
 
+> **🎥 Video Tutorial:** [PySERA: Extract Handcrafted Radiomics from Single & Multiple NIfTI Images](https://www.youtube.com/watch?v=4vEdSBLM5uA)
+> 
+> Watch our step-by-step tutorial demonstrating how to extract handcrafted radiomics features from NIfTI images using PySERA's simple API.
+
+
 ### 🤖Deep Features Extraction
 
 ### ⚠️ Additional Requirements for Deep Learning Models
